@@ -120,7 +120,7 @@ class ZeeRoutes implements IRoutes
                     'controller'=>$registerController,
                     'action'=>'registerUser'
                 ],
-                'login'=>true
+                //'login'=>true
             ],
             'account/success'=>[
                 'GET'=>[
@@ -194,7 +194,6 @@ class ZeeRoutes implements IRoutes
                     'action'=>'removeUser'
                 ]
             ]
-
         ];
         return $routes;
     }

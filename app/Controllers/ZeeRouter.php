@@ -29,8 +29,8 @@ class ZeeRouter
     }
 
     /**
-     *checks if the url user is in lowercase
-     * converts user's url to lowercase and redirects user to appropriate page
+     *check if the url user is in lowercase
+     * convert user's url to lowercase and redirect user to appropriate page
      */
     private function checkUrl()
     {
@@ -57,13 +57,13 @@ class ZeeRouter
     }
 
     /**
-     *calls the appropriate route controller action
+     *call the appropriate controller action
      */
     public function run()
     {
         $routes = $this->routes->getRoutes();
         $authenticator = $this->routes->getAuthenticator();
-        //checks if the current page request requires a user to be logged in
+        //check if the current page request require a user to be logged in
         if (isset($routes[$this->route]['login'])  && !$authenticator->checkAccess()){
             header('location:?route=login/error');
         }elseif (isset($routes[$this->route]['permissions']) && !$this->routes->checkPermission($routes[$this->route]['permissions'])){

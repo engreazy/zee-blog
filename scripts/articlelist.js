@@ -66,11 +66,11 @@ const paginator ={
     }
   },
   /*
-  accepts the current page number returned by the server
+  accept the current page number returned by the server
   if the current page number is less than one, then it is the first page
 
   else check the page and display the correct paginated numbering
-  Note: i is set to numbers to appear in the pagination tab
+  Note: i is set to number to appear in the pagination tab
   */
   paginatePage(currentPage)
   {
@@ -104,14 +104,14 @@ const paginator ={
   },
 };
 
-//calls the delete method on the entry to be deleted
+//call the delete method on the entry to be deleted
 modalLogic.callAction(View.actions);
 
 View.close.addEventListener('click',()=>View.hide(View.modal),false);
 View.cancel.addEventListener('click',()=>View.hide(View.modal),false);
 window.addEventListener('click',(event)=>{
   if(event.target == View.modal){
-    View.hide(View.modal);//hides the modal on click on anywhere on the page
+    View.hide(View.modal);//hide the modal on click on anywhere on the page
   }
 },false);
 

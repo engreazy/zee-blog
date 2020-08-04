@@ -16,7 +16,8 @@ try{
         /** @noinspection PhpIncludeInspection */
         include __DIR__.'/app/'.$fileName;
     }
-    spl_autoload_register('autoloader');
+    //spl_autoload_register('autoloader');
+    require_once __DIR__ . "/vendor/autoload.php";
     $route = isset($_GET['route'])?$_GET['route']:'zee/home';
 
     $zeeRouter = new \Controllers\ZeeRouter($route,$_SERVER['REQUEST_METHOD'],new \Controllers\ZeeRoutes());

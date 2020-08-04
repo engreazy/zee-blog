@@ -242,9 +242,13 @@ flex:4;
   text-align: center;
   font-weight: bold;
   background: #fff;
+  border:1px solid black;
   padding: 1em;
 }
-.success{color:green;}
+.success{
+  color:green;
+  border:1px solid black;
+}
 .warning{color:orangered;}
 
 

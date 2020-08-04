@@ -32,7 +32,5 @@ class DatabaseConnect implements  IConnect
                 //echo <strong>On Line</strong>".$e->getLine()."<br/>";
                 //echo <strong>In File</strong>".$e->getFile()."<br/>";
             }
-
-
     }
 }
